@@ -49,11 +49,11 @@ def print_one_article(article)
   # and print the title, author and text as a formatted string
   # See the README/sample output for examples
   
-  # ARTICLES.each do |article|
-  #   puts article["title"]
-  #   puts "by:" + article["author"]
-  #   puts article["text"]
-  # end
+  ARTICLES.each do |article|
+    puts article[:title]
+    puts "by: #{article["author"]}"
+    puts article[:text]
+  end
 end
 
 def print_many_articles(articles)
@@ -61,7 +61,7 @@ def print_many_articles(articles)
   # and format each one using the print_one_article method
 
   ARTICLES.each do |article|
-    puts article
+    puts "#{article[:text]}"
   end
 end
 
